@@ -17,7 +17,7 @@ class UserUpdate(BaseModel):
 class UserSignIn(HTTPBasicCredentials):
 
      class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {"username": "darix@darix.com", "password": "string"}
         }
 
