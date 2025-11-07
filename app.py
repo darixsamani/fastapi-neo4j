@@ -8,6 +8,9 @@ from contextlib import asynccontextmanager
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     initiate_database()
+    yield
+    # You can also close DB connections here if needed
+    print("App shutdown complete.")
 
 app = FastAPI(lifespan=lifespan, description="Template for building FastAPI applications with Neo4j.", contact={"email": "samanidarix@gmail.com", "tel": "691439424"})
 
