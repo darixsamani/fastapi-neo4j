@@ -1,42 +1,75 @@
-# FastAPI and NEO4J Boilerplate
-A simple starter for building RESTful APIs with FastAPI and NEO4J.
+# 🚀 FastAPI & Neo4j Boilerplate
 
+A lightweight starter template for building **RESTful APIs** with **FastAPI** and **Neo4j**. Perfect for quick prototyping or starting a new project! 🐍🗄️
 
-# Features
-  - Python FastAPI backend.
-  - Neo4J database.
-  - Authentication
-  - Deployment
+---
 
-# Using the application
-To use the application, follow the outlined steps:
-  1. Clone this repository and create a virtual environment in it:
+## ✨ Features
+
+- 🐍 **Python FastAPI backend**
+- 🗄️ **Neo4j graph database**
+- 🔐 **Authentication system**
+- 🚀 **Deployment-ready**
+
+---
+
+## ⚡ Getting Started
+
+Follow these steps to get the application running locally or with Docker.
+
+### 1️⃣ Clone the Repository & Create a Virtual Environment
+
      ```
      uv venv
      ```
-  2. Install the modules listed in the `requirements.txt` file:
-  3. run neo4j instance on docker
 
-     ```
-     docker run \                                                                        
-     --publish=7474:7474 --publish=7687:7687 \
-      --volume=$HOME/neo4j/data:/data \
-        neo4j
-      ```
+### 2️⃣ Run Neo4j with Docker
+
+Start a Neo4j instance using Docker:
+
+```bash
+docker run \
+  --publish=7474:7474 --publish=7687:7687 \
+  --volume=$HOME/neo4j/data:/data \
+  --env NEO4J_AUTH=neo4j/darixsamani \
+  neo4j
+```
 
 
-  4. You also need to start your NEO4J instance locally or on Docker and create a `.env.dev` file. See the `.env.sample` for configurations. 
+### 3️⃣ Configure Environment Variables
 
-  Example for running locally NEO4J at port 7474:
-    
-          cp .env.sample .env.dev
+You need to set up your local environment for the application to connect to Neo4j.
 
-  5. Start the application:
+1. Create a `.env.dev` file based on the sample provided:
 
-      ```
-        uv run main.py
-      ```
+```bash
+cp .env.sample .env.dev
+```
 
+
+### 4️⃣ Start the FastAPI Application
+
+Once your environment is set up, start the FastAPI server:
+
+```bash
+uv run main.py
+```
+
+### 5️⃣ Run the Project with Docker Compose
+
+You can run the entire project using Docker Compose for an easy setup.
+
+**Start the services:**
+
+```bash
+docker compose up -d
+```
+
+**Stop the services:**
+```bash
+docker compose down
+docker compose rm -vf
+```
 
 
 The starter listens on port 8000 on address [0.0.0.0](0.0.0.0:8080). 
