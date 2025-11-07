@@ -10,6 +10,7 @@ import logging
 from passlib.context import CryptContext
 from auth.deps import get_current_user
 from uuid import UUID
+from jwt.exceptions import PyJWTError
 
 UserRouter = APIRouter()
 
