@@ -1,4 +1,10 @@
 # 🚀 FastAPI & Neo4j Boilerplate
+[![FastAPI](https://img.shields.io/badge/FastAPI-async%20framework-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Neo4j](https://img.shields.io/badge/Database-Neo4j-008CC1?style=flat&logo=neo4j)](https://neo4j.com/)
+[![Docker](https://img.shields.io/badge/Deployed%20With-Docker-2496ED?style=flat&logo=docker)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Stable-success)]()
+
 
 A lightweight starter template for building **RESTful APIs** with **FastAPI** and **Neo4j**. Perfect for quick prototyping or starting a new project! 🐍🗄️
 
