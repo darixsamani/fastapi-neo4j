@@ -20,10 +20,6 @@ logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBU
 
 
 
-@app.on_event("startup")
-async def start_database():
-    initiate_database()
-
 
 @app.get("/", tags=["Root"])
 async def read_root():
