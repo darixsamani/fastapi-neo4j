@@ -35,6 +35,7 @@ Start a Neo4j instance using Docker:
 
 ```bash
 docker run \
+  --name fastapi_ne4j \
   --publish=7474:7474 --publish=7687:7687 \
   --volume=$HOME/neo4j/data:/data \
   --env NEO4J_AUTH=neo4j/darixsamani \
